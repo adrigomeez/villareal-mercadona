@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villareal de Mercadona</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    header {
+      background-color: #ffeb3b;
+      color: #0d47a1;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+    nav {
+      background-color: #0d47a1;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #0d47a1;
+      border-bottom: 2px solid #ffeb3b;
+      padding-bottom: 5px;
+    }
+    .jugadores, .tecnico {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Villareal de Mercadona</h1>
+    <!-- Escudo ficticio con carrito -->
+    <svg class="logo" viewBox="0 0 24 24" fill="#0d47a1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10
+               0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16
+               14l-.94-2H20v2H7.16zM6.34 12l-1.25-4h15.39l-1.1 4H6.34zM4 4h2l3.6
+               7.59-.35.59c-.16.28-.25.61-.25.95 0 1.1.9 2 2 2h10v2H7c-1.66
+               0-3-1.34-3-3 0-.64.2-1.23.54-1.72L2 6V4z"/>
+    </svg>
+  </header>
+  <nav>
+    <a href="#comunicados">Comunicados</a>
+    <a href="#plantilla">Plantilla</a>
+    <a href="#tecnico">Cuerpo Técnico</a>
+    <a href="#presidente">Presidente</a>
+  </nav>
 
+  <section id="comunicados">
+    <h2>Comunicados Oficiales</h2>
+    <ul>
+      <li>📢 20/06/2025 - Presentación oficial del equipo</li>
+      <li>📢 21/06/2025 - Partido inaugural anunciado contra FC Lavapiés</li>
+    </ul>
+  </section>
+
+  <section id="plantilla">
+    <h2>Plantilla de Jugadores</h2>
+    <div class="jugadores">
+      <div class="card">#1 Juan Torres - Portero</div>
+      <div class="card">#4 Luis Díaz - Defensa</div>
+      <div class="card">#7 Pedro Sánchez - Extremo</div>
+      <div class="card">#9 Mario López - Delantero</div>
+    </div>
+  </section>
+
+  <section id="tecnico">
+    <h2>Cuerpo Técnico</h2>
+    <div class="tecnico">
+      <div class="card">Entrenador: Roberto Fernández</div>
+      <div class="card">Asistente: Carla Márquez</div>
+      <div class="card">Preparador físico: Ignacio Ramírez</div>
+      <div class="card">Médico: Dra. Laura Pons</div>
+    </div>
+  </section>
+
+  <section id="presidente">
+    <h2>Presidencia</h2>
+    <p>👔 Presidente del club: Don Esteban Mercadillo</p>
+    <p>Desde su fundación en 2025, Villareal de Mercadona ha buscado representar la pasión del fútbol con seriedad, disciplina y compromiso ficticio.</p>
+  </section>
+
+  <footer>
+    © 2025 Villareal de Mercadona - Club ficticio sin fines comerciales
+  </footer>
+</body>
+</html>
