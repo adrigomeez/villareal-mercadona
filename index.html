@@ -7,25 +7,22 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fefefe;
-      color: #003366;
+      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom, #ffeb3b 0%, #ffffff 100%);
-      overflow-y: scroll;
+      color: #003366;
     }
 
     header {
       background-color: #003366;
-      color: #fff;
-      padding: 1rem;
+      color: white;
       text-align: center;
+      padding: 2rem;
     }
 
     nav {
       background-color: #002244;
-      color: white;
-      padding: 0.5rem;
       text-align: center;
+      padding: 1rem;
     }
 
     nav a {
@@ -37,11 +34,11 @@
 
     section {
       padding: 2rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 2px solid #ccc;
     }
 
     h2 {
-      color: #003366;
+      color: #002244;
       border-bottom: 2px solid #003366;
       padding-bottom: 0.5rem;
     }
@@ -51,8 +48,32 @@
       padding-left: 0;
     }
 
-    ul li {
+    li {
       margin: 0.25rem 0;
+    }
+
+    .sub-section {
+      margin-top: 1.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      resize: none;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #001f3f;
     }
 
     footer {
@@ -63,106 +84,86 @@
     }
 
     .twitter-embed {
-      margin: 1rem 0;
-    }
-
-    .comunicado-input {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .comunicado-input textarea {
-      resize: none;
-      padding: 0.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
-
-    .comunicado-input button {
-      background-color: #003366;
-      color: white;
-      border: none;
-      padding: 0.5rem;
-      cursor: pointer;
-    }
-
-    .comunicado-input button:hover {
-      background-color: #002244;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Villareal de Mercadona</h1>
-    <p>Pasión, ahorro y buen fútbol</p>
+    <p>Pasión, ahorro y buen fútbol 💛💙</p>
   </header>
 
   <nav>
     <a href="#plantilla">Plantilla</a>
-    <a href="#cuerpo-tecnico">Cuerpo Técnico</a>
     <a href="#comunicados">Comunicados</a>
     <a href="https://twitter.com/VillarealM_LSS" target="_blank">Twitter Oficial</a>
   </nav>
 
   <section id="plantilla">
-    <h2>Plantilla</h2>
-    
-    <h3>Porteros</h3>
-    <ul>
-      <li>1 - Olij</li>
-      <li>23 - Areola</li>
-    </ul>
+    <h2>Plantilla 2025</h2>
 
-    <h3>Defensas</h3>
-    <ul>
-      <li>2 - St Juste</li>
-      <li>3 - Capdevila</li>
-      <li>4 - Brown</li>
-      <li>5 - Ndayishimiye</li>
-      <li>12 - Mojica</li>
-      <li>13 - Bassey</li>
-      <li>15 - Hinshelwood</li>
-    </ul>
+    <div class="sub-section">
+      <h3>Porteros</h3>
+      <ul>
+        <li>1 - Olij</li>
+        <li>23 - Areola</li>
+      </ul>
+    </div>
 
-    <h3>Centrocampistas</h3>
-    <ul>
-      <li>6 - Woltermade</li>
-      <li>8 - Essugo</li>
-      <li>14 - Onyedika</li>
-    </ul>
+    <div class="sub-section">
+      <h3>Defensas</h3>
+      <ul>
+        <li>2 - St Juste</li>
+        <li>3 - Capdevila</li>
+        <li>4 - Brown</li>
+        <li>5 - Ndayishimiye</li>
+        <li>12 - Mojica</li>
+        <li>13 - Bassey</li>
+        <li>15 - Hinshelwood</li>
+      </ul>
+    </div>
 
-    <h3>Delanteros</h3>
-    <ul>
-      <li>7 - Politano</li>
-      <li>9 - Forlán</li>
-      <li>10 - Okafor</li>
-      <li>11 - Gboho</li>
-      <li>16 - Tella</li>
-      <li>17 - Jota</li>
-      <li>18 - Wimmer</li>
-    </ul>
-  </section>
+    <div class="sub-section">
+      <h3>Centrocampistas</h3>
+      <ul>
+        <li>6 - Woltermade</li>
+        <li>8 - Essugo</li>
+        <li>14 - Onyedika</li>
+      </ul>
+    </div>
 
-  <section id="cuerpo-tecnico">
-    <h2>Cuerpo Técnico</h2>
-    <ul>
-      <li>Segundo Alejandro Castillo – Entrenador Principal</li>
-      <li>Federico Zurbriggen – Preparador Físico</li>
-      <li>Ariel Rodríguez – Asistente P.F.</li>
-      <li>Héctor Isla – Asistente técnico</li>
-    </ul>
+    <div class="sub-section">
+      <h3>Delanteros</h3>
+      <ul>
+        <li>7 - Politano</li>
+        <li>9 - Forlán</li>
+        <li>10 - Okafor</li>
+        <li>11 - Gboho</li>
+        <li>16 - Tella</li>
+        <li>17 - Jota</li>
+        <li>18 - Wimmer</li>
+      </ul>
+    </div>
+
+    <div class="sub-section">
+      <h3>Cuerpo Técnico</h3>
+      <ul>
+        <li>Segundo Alejandro Castillo – Entrenador Principal</li>
+        <li>Federico Zurbriggen – Preparador Físico</li>
+        <li>Ariel Rodríguez – Asistente P.F.</li>
+        <li>Héctor Isla – Asistente técnico</li>
+      </ul>
+    </div>
   </section>
 
   <section id="comunicados">
     <h2>Comunicados Oficiales</h2>
+    <p>Redacta un comunicado y compártelo en Twitter con un enlace a esta página web.</p>
 
-    <p>Aquí puedes insertar comunicados y compartirlos directamente en Twitter.</p>
-
-    <div class="comunicado-input">
-      <textarea rows="4" placeholder="Escribe tu comunicado..."></textarea>
-      <button onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.querySelector('textarea').value), '_blank')">Publicar en Twitter</button>
-    </div>
+    <textarea id="comunicado" rows="4" placeholder="Ej: Anunciamos fichaje bomba del Villareal de Mercadona. Más detalles aquí: https://miweb.com"></textarea>
+    <button onclick="compartirEnTwitter()">Compartir en Twitter</button>
 
     <div class="twitter-embed">
       <blockquote class="twitter-tweet">
@@ -173,9 +174,18 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Villareal de Mercadona | Diseño paródico con estilo profesional</p>
+    <p>&copy; 2025 Villareal de Mercadona | Sitio paródico con estilo profesional</p>
   </footer>
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    function compartirEnTwitter() {
+      const texto = document.getElementById("comunicado").value;
+      const urlPagina = window.location.href;
+      const tweet = `${texto} ${urlPagina}`;
+      const enlace = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
+      window.open(enlace, '_blank');
+    }
+  </script>
 </body>
 </html>
