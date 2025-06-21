@@ -5,17 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Villareal de Mercadona</title>
   <style>
-    /* Reset básico */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
     body {
       font-family: Arial, sans-serif;
       background: #fffcf0;
       color: #002147;
       scroll-behavior: smooth;
+      margin: 0; padding: 0;
     }
-    /* Contenedor de bienvenida */
+    #menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 30px;
+      height: 25px;
+      cursor: default; /* no clicable */
+      z-index: 2001;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #menu-btn div {
+      width: 100%;
+      height: 4px;
+      background: #002147;
+      border-radius: 2px;
+    }
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 20px;
+      background: #ffcc00;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    nav a {
+      color: #002147;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     #welcome-screen {
       height: 100vh;
       background: linear-gradient(135deg, #ffcc00 0%, #004080 100%);
@@ -39,101 +74,20 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
       margin-bottom: 1.5em;
     }
-    #enter-button {
-      background: #002147;
-      color: #ffcc00;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      font-weight: bold;
-    }
-    #enter-button:hover {
-      background: #001830;
-    }
-    /* Menú hamburguesa */
-    #menu-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 30px;
-      height: 25px;
-      cursor: pointer;
-      z-index: 2001;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    #menu-btn div {
-      width: 100%;
-      height: 4px;
-      background: #002147;
-      border-radius: 2px;
-      transition: 0.3s;
-    }
-    /* Menú lateral oculto */
-    #side-menu {
-      position: fixed;
-      top: 0; left: -260px;
-      width: 260px;
-      height: 100vh;
-      background: #ffcc00;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-      padding: 50px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      transition: left 0.3s ease;
-      z-index: 2000;
-    }
-    #side-menu a {
-      color: #002147;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 5px;
-      transition: border-color 0.3s;
-    }
-    #side-menu a:hover {
-      border-color: #002147;
-    }
-    /* Mostrar menú al activar */
-    #side-menu.active {
-      left: 0;
-    }
-    /* Animación del botón hamburguesa cuando está activo */
-    #menu-btn.active div:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    #menu-btn.active div:nth-child(2) {
-      opacity: 0;
-    }
-    #menu-btn.active div:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-    /* Contenido principal oculto hasta entrar */
-    #main-content {
-      display: none;
-      padding: 80px 20px 40px;
+    main {
       max-width: 900px;
       margin: auto;
-    }
-    #main-content.active {
-      display: block;
+      padding: 40px 20px 80px;
     }
     h2 {
       color: #002147;
       margin-bottom: 0.7em;
       text-align: center;
     }
-    /* Estilos de sección */
     section {
       margin-bottom: 60px;
     }
-    /* Plantilla y cuerpo técnico estilos */
+    /* Tarjetas plantilla y técnico */
     .jugadores, .tecnico {
       display: flex;
       flex-wrap: wrap;
@@ -150,7 +104,6 @@
       color: #002147;
       box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     }
-    /* Botón twitter */
     .tweet-btn {
       background: #1da1f2;
       color: white;
@@ -168,7 +121,6 @@
     .tweet-btn:hover {
       background: #0d95e8;
     }
-    /* Redes sociales iconos simples */
     .redes-sociales {
       display: flex;
       justify-content: center;
@@ -184,44 +136,36 @@
     .redes-sociales a:hover {
       color: #ffcc00;
     }
-    /* Responsive */
     @media (max-width: 600px) {
       .card {
         width: 100%;
-      }
-      #side-menu {
-        width: 200px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Botón menú hamburguesa -->
-  <div id="menu-btn" aria-label="Abrir menú" role="button" tabindex="0">
+  <div id="menu-btn" aria-label="Menú (no funcional)">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <!-- Menú lateral -->
-  <nav id="side-menu" aria-label="Navegación principal">
-    <a href="#comunicados" class="nav-link">Comunicados</a>
-    <a href="#plantilla" class="nav-link">Plantilla</a>
-    <a href="#tecnico" class="nav-link">Cuerpo Técnico</a>
-    <a href="#presidente" class="nav-link">Presidente</a>
-    <a href="#redes" class="nav-link">Redes Sociales</a>
+  <nav aria-label="Navegación principal">
+    <a href="#comunicados">Comunicados</a>
+    <a href="#plantilla">Plantilla</a>
+    <a href="#tecnico">Cuerpo Técnico</a>
+    <a href="#presidente">Presidente</a>
+    <a href="#redes">Redes Sociales</a>
   </nav>
 
-  <!-- Pantalla de bienvenida -->
-  <div id="welcome-screen" role="main" aria-label="Pantalla de bienvenida">
+  <section id="welcome-screen" role="main" aria-label="Pantalla de bienvenida">
     <h1>Villareal de Mercadona</h1>
     <p>Bienvenido al club ficticio con estilo y profesionalismo.</p>
-    <button id="enter-button" aria-label="Entrar al sitio">Entrar</button>
-  </div>
+  </section>
 
-  <!-- Contenido principal -->
-  <div id="main-content" tabindex="-1">
+  <main id="main-content" tabindex="-1">
+
     <section id="comunicados" tabindex="0">
       <h2>Comunicados Oficiales</h2>
       <article>
@@ -264,10 +208,40 @@
       <h3>Delanteros</h3>
       <div class="jugadores">
         <div class="card">#7 Politano - Delantero</div>
-        <div class="card">#9 Forlán
-          <div class="card">#10 Okafor - Delantero</div>
-  <div class="card">#11 Gboho - Delantero</div>
-  <div class="card">#16 Tella - Delantero</div>
-  <div class="card">#17 Jota - Delantero</div>
-  <div class="card">#18 Wimmer - Delantero</div>
-</div>
+        <div class="card">#9 Forlán - Delantero</div>
+        <div class="card">#10 Okafor - Delantero</div>
+        <div class="card">#11 Gboho - Delantero</div>
+        <div class="card">#16 Tella - Delantero</div>
+        <div class="card">#17 Jota - Delantero</div>
+        <div class="card">#18 Wimmer - Delantero</div>
+      </div>
+    </section>
+
+    <section id="tecnico" tabindex="0">
+      <h2>Cuerpo Técnico</h2>
+      <div class="tecnico">
+        <div class="card">Entrenador Principal: Alejandro Castillo</div>
+        <div class="card">Preparador Físico: Federico Zurbriggen</div>
+        <div class="card">Asistente Preparador Físico: Ariel Rodríguez</div>
+        <div class="card">Asistente Técnico: Héctor Isla</div>
+      </div>
+    </section>
+
+    <section id="presidente" tabindex="0">
+      <h2>Presidente</h2>
+      <p style="text-align:center; font-weight:bold;">Don Juan Pérez</p>
+    </section>
+
+    <section id="redes" tabindex="0">
+      <h2>Redes Sociales</h2>
+      <div class="redes-sociales">
+        <a href="https://twitter.com/villarealmercadona" target="_blank" aria-label="Twitter Villareal de Mercadona" rel="noopener">🐦</a>
+        <a href="https://facebook.com/villarealmercadona" target="_blank" aria-label="Facebook Villareal de Mercadona" rel="noopener">📘</a>
+        <a href="https://instagram.com/villarealmercadona" target="_blank" aria-label="Instagram Villareal de Mercadona" rel="noopener">📸</a>
+      </div>
+    </section>
+
+  </main>
+  
+</body>
+</html>
